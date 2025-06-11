@@ -22,5 +22,9 @@ class NotesDetailsActivity : AppCompatActivity() {
         }
 
         showDetails = findViewById<TextView>(R.id.tv_show)
+
+        val text = intent.getStringExtra("title ") + intent.getStringExtra("description")
+
+        showDetails.text = text
     }
 }

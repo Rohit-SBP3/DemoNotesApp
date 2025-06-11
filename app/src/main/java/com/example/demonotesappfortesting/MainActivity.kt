@@ -1,5 +1,6 @@
 package com.example.demonotesappfortesting
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -27,6 +28,18 @@ class MainActivity : AppCompatActivity() {
         btnSubmit = findViewById<Button>(R.id.btn_submit)
         title = findViewById<EditText>(R.id.edt_title)
         description = findViewById<EditText>(R.id.edt_description)
+
+        btnSubmit.setOnClickListener {
+
+            val t = title.text.toString()
+            val d = description.text.toString()
+            val intent = Intent(this, NotesDetailsActivity::class.java).apply{
+                putExtra("title",t)
+                putExtra("description",d)
+            }
+
+            startActivity(intent)
+        }
 
     }
 }
