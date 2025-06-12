@@ -31,11 +31,11 @@ class MainActivity : AppCompatActivity() {
 
         btnSubmit.setOnClickListener {
 
-            val t = title.text.toString()
-            val d = description.text.toString()
+            val tit = title.text.toString()
+            val desc = description.text.toString()
             val intent = Intent(this, NotesDetailsActivity::class.java).apply{
-                putExtra("title",t)
-                putExtra("description",d)
+                putExtra("title",tit)
+                putExtra("description",desc)
             }
 
             startActivity(intent)
