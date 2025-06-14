@@ -23,11 +23,8 @@ class MainActivityTest {
     fun testSubmitBtn_expected_correctValue() {
         onView(withId(R.id.edt_title)).perform(typeText("Hello"))
         onView(withId(R.id.edt_description)).perform(typeText("World"), closeSoftKeyboard())
-
         onView(withId(R.id.btn_submit)).perform(click())
-
         onView(withId(R.id.tv_show)).check(matches(withText("HelloWorld")))
-
     }
 
 }
